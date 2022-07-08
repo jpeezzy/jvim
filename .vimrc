@@ -1,8 +1,9 @@
 " =============================================================================
-" Author: josuegaleas
-" Source: https://github.com/josuegaleas/jvim
-" Last Edit: 2021.06.30
+" Author: Justin Lee
+" Source: https://github.com/jpeezzy/jvim
+" Last Edit: 2022.07.8
 " =============================================================================
+let g:plugs_disabled = ['vim-fugitive', 'vim-gitgutter']
 
 " Plugins:
 call plug#begin()
@@ -13,28 +14,28 @@ Plug 'sheerun/vim-polyglot'
 " Git
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
-" Other Tools
+"" Other Tools
 Plug 'ervandew/supertab'
 Plug 'dense-analysis/ale'
 Plug 'tpope/vim-commentary'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'LucHermitte/lh-vim-lib'
 Plug 'LucHermitte/local_vimrc'
-" Colorscheme Development
-" Plug 'tomasr/molokai'
-" Plug 'vim-airline/vim-airline'
-" Plug 'itchyny/lightline.vim'
-" Plug 'guns/xterm-color-table.vim'
-" Plug 'chrisbra/Colorizer'
-" Plug 'gerw/vim-HiLinkTrace'
-
+"" Colorscheme Development
+"" Plug 'tomasr/molokai'
+"" Plug 'vim-airline/vim-airline'
+"" Plug 'itchyny/lightline.vim'
+"" Plug 'guns/xterm-color-table.vim'
+"" Plug 'chrisbra/Colorizer'
+"" Plug 'gerw/vim-HiLinkTrace'
+call plug_disable#commit()
 call plug#end()
 
-" Vim Preferences:
-if !has('gui_running')
-	set t_Co=256
-endif
-set encoding=utf8
+"" Vim Preferences:
+"if !has('gui_running')
+"	set t_Co=256
+"endif
+"set encoding=utf8
 " Appearance
 set background=dark
 " let jay_transparent=1
@@ -87,7 +88,7 @@ nnoremap <leader>sc :setlocal spell!<cr>
 nnoremap <leader>pm :set paste!<cr>
 " Un-highlight
 nnoremap <leader>uh :nohlsearch<cr>
-" ALE
+"" ALE
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
 " Colorscheme Development
